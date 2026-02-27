@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - LuminaWash</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .about-blob {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: #6366f1;
+            opacity: 0.1;
+        }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.21.8C7.69.295 8 0 8 0s.31.295.79.804C11.67 3.653 14 7.6 14 11c0 3.314-2.686 6-6 6s-6-2.686-6-6c0-3.4 2.33-7.347 5.21-10.2M4.553 13.131C4.738 13.26 5 13.13 5 12.87V5.513c0-.181.041-.354.12-.506.54-1.053 1.637-2.585 2.88-3.951.845-.922 1.541-1.56 1.83-1.815v14.123A4.98 4.98 0 0 1 4.553 13.13' fill='%236366f1'/%3E%3C/svg%3E"
+        type="image/svg+xml">
+</head>
+
+<body class="position-relative overflow-x-hidden">
+
+    <div class="blob-bg about-blob"></div>
+
+    <nav class="navbar navbar-expand-lg glass-nav fixed-top py-3">
+        <div class="container align-items-center">
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
+                <i class="bi bi-droplet-half text-gradient me-2 fs-2"></i>
+                <span class="text-gradient">LuminaWash</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+                <i class="bi bi-list fs-1 text-primary-color"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+                    <li class="nav-item"><a class="nav-link px-4 text-main" href="index.html">Home 1</a></li>
+                    <li class="nav-item"><a class="nav-link px-4 text-main" href="index-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link px-4 text-main" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link px-4 text-main active" href="booking.html">Booking</a></li>
+                    <li class="nav-item"><a class="nav-link px-4 text-main" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link px-4 text-main" href="dashboard.html">Dashboard</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                    <div id="themeToggle"
+                        class="btn btn-light rounded-circle p-2 shadow-sm d-flex align-items-center justify-content-center"
+                        style="width:40px;height:40px;cursor:pointer;">
+                        <i class="bi bi-moon fs-5 text-muted"></i>
+                    </div>
+                    <a href="login.html" class="btn btn-primary-modern px-4">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modern Booking Section -->
+    <section class="min-vh-100 d-flex align-items-center pt-5 mt-5">
+        <div class="container pt-5">
+            <div class="row g-5 align-items-center mb-5">
+
+                <!-- Left Info Side -->
+                <div class="col-lg-5 reveal-up">
+                    <span class="text-primary-color fw-bold text-uppercase tracking-wide small mb-2 d-block">Schedule
+                        Now</span>
+                    <h1 class="display-4 fw-bolder mb-4">Book Your <br><span class="text-gradient">Pickup.</span></h1>
+                    <p class="lead text-muted mb-5">
+                        Experience the ultimate convenience. Schedule your pickup, and we'll handle the rest with
+                        microscopic precision and eco-friendly care.
+                    </p>
+
+                    <div class="d-flex mb-4 align-items-start">
+                        <div class="icon-box bg-light text-primary-color rounded-circle d-flex align-items-center justify-content-center shadow-sm me-3"
+                            style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <i class="bi bi-calendar-check fs-4"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">1. Choose a Time</h6>
+                            <p class="text-muted small mb-0">Select a convenient 2-hour window for our drivers.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4 align-items-start">
+                        <div class="icon-box bg-light text-secondary-color rounded-circle d-flex align-items-center justify-content-center shadow-sm me-3"
+                            style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <i class="bi bi-box-seam fs-4"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">2. We Collect</h6>
+                            <p class="text-muted small mb-0">Hand over your bags or leave them at your door.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4 align-items-start">
+                        <div class="icon-box bg-light text-primary-color rounded-circle d-flex align-items-center justify-content-center shadow-sm me-3"
+                            style="width: 50px; height: 50px; flex-shrink: 0;">
+                            <i class="bi bi-truck fs-4"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">3. Fresh Delivery</h6>
+                            <p class="text-muted small mb-0">Returned to you spotless and perfectly folded in 48 hours.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Side -->
+                <div class="col-lg-7 reveal-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 p-md-5 border-0 shadow-lg bg-white" style="border-radius: 30px;">
+                        <h4 class="fw-bold mb-4">Service Details</h4>
+                        <form>
+                            <div class="row g-3">
+                                <!-- Service Select -->
+                                <div class="col-12 mb-2">
+                                    <label class="form-label fw-bold small text-muted text-uppercase mb-2">Select
+                                        Service</label>
+                                    <select class="form-select bg-light border-0 py-3 shadow-none"
+                                        style="border-radius: 12px; cursor: pointer;">
+                                        <option selected disabled>Choose a service type...</option>
+                                        <option value="wash-fold">Wash & Fold (Standard)</option>
+                                        <option value="dry-cleaning">Executive Dry Cleaning</option>
+                                        <option value="alterations">Tailoring & Alterations</option>
+                                        <option value="bulk">Commercial/Bulk Wash</option>
+                                    </select>
+                                </div>
+
+                                <!-- Date & Time -->
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label fw-bold small text-muted text-uppercase mb-2">Pickup
+                                        Date</label>
+                                    <input type="date" class="form-control bg-light border-0 py-3 shadow-none"
+                                        style="border-radius: 12px; cursor: pointer;">
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label fw-bold small text-muted text-uppercase mb-2">Pickup
+                                        Window</label>
+                                    <select class="form-select bg-light border-0 py-3 shadow-none"
+                                        style="border-radius: 12px; cursor: pointer;">
+                                        <option selected disabled>Select time...</option>
+                                        <option value="morning">08:00 AM - 10:00 AM</option>
+                                        <option value="midday">10:00 AM - 12:00 PM</option>
+                                        <option value="afternoon">02:00 PM - 04:00 PM</option>
+                                        <option value="evening">06:00 PM - 08:00 PM</option>
+                                    </select>
+                                </div>
+
+                                <!-- Contact Info -->
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label fw-bold small text-muted text-uppercase mb-2">Full
+                                        Name</label>
+                                    <input type="text" class="form-control bg-light border-0 py-3 shadow-none"
+                                        style="border-radius: 12px;" placeholder="John Doe">
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label class="form-label fw-bold small text-muted text-uppercase mb-2">Phone
+                                        Number</label>
+                                    <input type="tel" class="form-control bg-light border-0 py-3 shadow-none"
+                                        style="border-radius: 12px;" placeholder="(555) 000-0000">
+                                </div>
+
+                                <!-- Address -->
+                                <div class="col-12 mb-3">
+                                    <label class="form-label fw-bold small text-muted text-uppercase mb-2">Pickup
+                                        Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-0 py-3"
+                                            style="border-radius: 12px 0 0 12px;">
+                                            <i class="bi bi-geo-alt text-muted"></i>
+                                        </span>
+                                        <input type="text" class="form-control bg-light border-0 py-3 shadow-none"
+                                            style="border-radius: 0 12px 12px 0;"
+                                            placeholder="Enter your full street address">
+                                    </div>
+                                </div>
+
+                                <!-- Submit -->
+                                <div class="col-12 mt-4 text-center">
+                                    <button type="button"
+                                        class="btn btn-primary-modern btn-lg w-100 py-3 d-flex align-items-center justify-content-center"
+                                        onclick="alert('Booking functionality would execute here!');">
+                                        <i class="bi bi-calendar-check me-2"></i> Confirm Booking
+                                    </button>
+                                    <p class="text-muted small mt-3 mb-0"><i class="bi bi-shield-lock me-1"></i> Your
+                                        information is secure. No payment required until delivery.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Prepare Section -->
+    <section class="py-5 bg-light position-relative overflow-hidden">
+        <div class="blob-bg service-page-blob" style="opacity: 0.05;"></div>
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal-up">
+                <span class="text-secondary-color fw-bold text-uppercase tracking-wide small mb-2 d-block">Quick
+                    Guide</span>
+                <h2 class="display-5 fw-bold">How to <span class="text-gradient">Prepare Your Laundry</span></h2>
+                <p class="text-muted lead">Follow these simple steps for a seamless pickup experience.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 reveal-up">
+                    <div class="glass-card p-4 text-center h-100 bg-white shadow-sm border-0 transition-smooth hover-lift"
+                        style="cursor: default;">
+                        <div class="icon-box bg-light text-primary-color rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center"
+                            style="width: 70px; height: 70px;">
+                            <i class="bi bi-bag-check fs-2"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Bag It Up</h5>
+                        <p class="text-muted small mb-0">Place your garments in any disposable bag for your first order.
+                            We will return them in a complimentary, reusable LuminaWash premium garment bag.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 text-center h-100 bg-white shadow-sm border-0 transition-smooth hover-lift"
+                        style="cursor: default;">
+                        <div class="icon-box bg-light text-secondary-color rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center"
+                            style="width: 70px; height: 70px;">
+                            <i class="bi bi-search fs-2"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Check Your Pockets</h5>
+                        <p class="text-muted small mb-0">Please ensure all pockets are emptied of pens, receipts, and
+                            valuables. Our robotic sorting will do a final check, but your help speeds up the process.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 text-center h-100 bg-white shadow-sm border-0 transition-smooth hover-lift"
+                        style="cursor: default;">
+                        <div class="icon-box bg-light text-primary-color rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center"
+                            style="width: 70px; height: 70px;">
+                            <i class="bi bi-tag fs-2"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Special Instructions</h5>
+                        <p class="text-muted small mb-0">Have a stubborn stain? Leave a note inside the bag or add it to
+                            the 'Special Instructions' when booking, and our specialists will handle it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Estimates Section -->
+    <section class="py-5 bg-white border-bottom position-relative">
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal-up">
+                <span class="text-primary-color fw-bold text-uppercase tracking-wide small mb-2 d-block">Transparent
+                    Pricing</span>
+                <h2 class="display-5 fw-bold">Simple, <span class="text-gradient">Predictable Costs.</span></h2>
+                <p class="text-muted lead">No hidden fees. You only pay for what we process.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 reveal-up">
+                    <div class="glass-card p-4 h-100 bg-light border-0 text-center">
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-1">Wash & Fold</h5>
+                            <p class="text-muted small">Everyday Laundry</p>
+                        </div>
+                        <h2 class="display-4 fw-bold text-gradient mb-0">$2.49</h2>
+                        <p class="text-muted mb-4">per pound</p>
+                        <ul class="list-unstyled text-start small text-muted mb-0">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-color me-2"></i> Separated
+                                lights and darks</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-color me-2"></i> Custom
+                                temperature wash</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-color me-2"></i> Crisp machine fold</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal-up" style="transition-delay: 0.1s;">
+                    <div
+                        class="glass-card p-4 h-100 bg-white border border-primary shadow-sm text-center position-relative">
+                        <div class="mb-4 mt-2">
+                            <h5 class="fw-bold mb-1">Dry Cleaning</h5>
+                            <p class="text-muted small">Executive Wardrobe</p>
+                        </div>
+                        <h2 class="display-4 fw-bold text-gradient mb-0">$8.99+</h2>
+                        <p class="text-muted mb-4">per item</p>
+                        <ul class="list-unstyled text-start small text-muted mb-0">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary-color me-2"></i>
+                                Eco-solvent cleaning</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary-color me-2"></i>
+                                Hand-pressed finishing</li>
+                            <li><i class="bi bi-check-circle-fill text-secondary-color me-2"></i> Returned on custom
+                                hangers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 h-100 bg-light border-0 text-center">
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-1">Bedding & Linens</h5>
+                            <p class="text-muted small">Home Essentials</p>
+                        </div>
+                        <h2 class="display-4 fw-bold text-gradient mb-0">$25.00+</h2>
+                        <p class="text-muted mb-4">per set</p>
+                        <ul class="list-unstyled text-start small text-muted mb-0">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-color me-2"></i> Comforters
+                                and duvets</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary-color me-2"></i> Sheets and
+                                pillowcases</li>
+                            <li><i class="bi bi-check-circle-fill text-primary-color me-2"></i> Deep stain removal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light position-relative">
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal-up">
+                <span
+                    class="text-secondary-color fw-bold text-uppercase tracking-wide small mb-2 d-block">Reviews</span>
+                <h2 class="display-5 fw-bold">Don't Just <span class="text-gradient">Take Our Word.</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 reveal-up">
+                    <div class="glass-card p-4 bg-white border-0 shadow-sm h-100">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted fst-italic">"The booking process is unbelievably smooth. 2 hours later a
+                            driver was at my door, and 48 hours later my suits looked brand new. LuminaWash gave me my
+                            weekends back."</p>
+                        <div class="d-flex justify-content-center text-center mt-4">
+                            <div>
+                                <h6 class="fw-bold mb-0">Michael J.</h6>
+                                <small class="text-muted">Executive Client</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-up" style="transition-delay: 0.1s;">
+                    <div class="glass-card p-4 bg-white border-0 shadow-sm h-100">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted fst-italic">"They managed to get a red wine stain out of a white silk dress
+                            that two other cleaners told me was ruined. The tracking app is also a game changer.
+                            Customer for life."</p>
+                        <div class="d-flex justify-content-center text-center mt-4">
+                            <div>
+                                <h6 class="fw-bold mb-0">Sarah R.</h6>
+                                <small class="text-muted">Weekly Subscriber</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card p-4 bg-white border-0 shadow-sm h-100">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted fst-italic">"I use them for both my home and my small boutique hotel. The
+                            consistency is unmatched. Everything always comes back perfectly folded, smelling fresh, and
+                            exactly on time."</p>
+                        <div class="d-flex justify-content-center text-center mt-4">
+                            <div>
+                                <h6 class="fw-bold mb-0">David L.</h6>
+                                <small class="text-muted">B2B Partner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Area Section -->
+    <section class="py-5 bg-white position-relative">
+        <div class="container py-5 text-center reveal-up">
+            <h2 class="display-6 fw-bold mb-4">We're in Your <span class="text-gradient">Neighborhood.</span></h2>
+            <p class="lead text-muted mx-auto mb-5" style="max-width: 600px;">
+                Our zero-emission electric fleet currently serves the greater metropolitan area. Check if we deliver to
+                your zip code.
+            </p>
+            <div class="d-flex justify-content-center">
+                <div class="glass-card p-2 shadow-sm d-flex w-100" style="max-width: 500px; border-radius: 50px;">
+                    <input type="text" class="form-control border-0 bg-transparent shadow-none px-4"
+                        placeholder="Enter your Zip Code...">
+                    <button class="btn btn-primary-modern rounded-pill px-4">Check Availability</button>
+                </div>
+            </div>
+            <div class="mt-4 pt-4 border-top mx-auto d-flex flex-wrap justify-content-center gap-3"
+                style="max-width: 800px;">
+                <span class="badge bg-light text-muted border px-3 py-2 rounded-pill">Downtown Core</span>
+                <span class="badge bg-light text-muted border px-3 py-2 rounded-pill">Westside Heights</span>
+                <span class="badge bg-light text-muted border px-3 py-2 rounded-pill">North Shore</span>
+                <span class="badge bg-light text-muted border px-3 py-2 rounded-pill">South District</span>
+                <span class="badge bg-light text-muted border px-3 py-2 rounded-pill">Silicon Valley Ext.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking FAQ Section -->
+    <section class="py-5 bg-white position-relative">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 reveal-up">
+                    <span
+                        class="text-primary-color fw-bold text-uppercase tracking-wide small mb-2 d-block">Questions?</span>
+                    <h2 class="display-5 fw-bold mb-4">Common <span class="text-gradient">Questions.</span></h2>
+                    <p class="text-muted mb-4">Here's everything you need to know about scheduling your pickup and
+                        delivery with LuminaWash.</p>
+                    <a href="contact.html" class="btn btn-outline-modern">Contact Support <i
+                            class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+                <div class="col-lg-7 reveal-up" style="transition-delay: 0.1s;">
+                    <div class="accordion glass-card border-0 shadow-sm" id="bookingFaq">
+                        <div class="accordion-item border-0 bg-transparent mb-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-light rounded-4 fw-bold collapsed text-main"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Do I need to separate my colors and whites?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#bookingFaq">
+                                <div class="accordion-body text-muted small px-4 py-3">
+                                    Not at all! Our advanced facility uses automated sorting technology. Just put
+                                    everything in one bag, and our team will separate colors, whites, and delicates
+                                    before washing.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 bg-transparent mb-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-light rounded-4 fw-bold collapsed text-main"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What if I'm not home during the pickup window?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#bookingFaq">
+                                <div class="accordion-body text-muted small px-4 py-3">
+                                    No problem. You can leave your bags at your front door, with your concierge, or in a
+                                    designated safe spot. Just include delivery instructions when booking.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 bg-transparent mb-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-light rounded-4 fw-bold collapsed text-main"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Is there a minimum order limit?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#bookingFaq">
+                                <div class="accordion-body text-muted small px-4 py-3">
+                                    Yes, we have a $30 minimum order for free pickup and delivery. If your order is
+                                    under the minimum, a small $5 delivery fee will be applied to your final bill.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 bg-transparent">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-light rounded-4 fw-bold collapsed text-main"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How do I pay for my service?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#bookingFaq">
+                                <div class="accordion-body text-muted small px-4 py-3">
+                                    We do not charge you at the time of booking. Once your laundry is processed and
+                                    weighed/itemized at our facility, an exact invoice will be sent to your email and
+                                    app for payment before delivery.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Comprehensive Footer -->
+    <footer class="pt-5 pb-4 border-top mt-auto bg-white">
+        <div class="container pt-4">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <a class="navbar-brand d-inline-flex align-items-center fw-bold fs-3 mb-3" href="index.html">
+                        <i class="bi bi-droplet-half text-gradient me-2"></i>
+                        <span class="text-gradient">LuminaWash</span>
+                    </a>
+                    <p class="text-muted mb-4 pe-lg-4">Providing premium, eco-friendly garment care that gives you back
+                        your weekends. Smart logistics meets immaculate cleaning.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#"
+                            class="btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center shadow-sm"
+                            style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"
+                            class="btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center shadow-sm"
+                            style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i></a>
+                        <a href="#"
+                            class="btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center shadow-sm"
+                            style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="fw-bold mb-4 text-main">Company</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="booking.html"
+                                class="text-muted text-decoration-none footer-link">Booking</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none footer-link">Careers</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none footer-link">Press</a></li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-muted text-decoration-none footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="fw-bold mb-4 text-main">Services</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="services.html"
+                                class="text-muted text-decoration-none footer-link">Wash & Fold</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none footer-link">Dry
+                                Cleaning</a></li>
+                        <li class="mb-2"><a href="services.html"
+                                class="text-muted text-decoration-none footer-link">Subscriptions</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none footer-link">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold mb-4 text-main">Stay Updated</h6>
+                    <p class="text-muted mb-3 small">Subscribe to our newsletter for exclusive offers and garment care
+                        tips.</p>
+                    <form class="d-flex position-relative">
+                        <input type="email" class="form-control bg-light border-0 py-3 pe-5"
+                            style="border-radius: 12px;" placeholder="Your email address">
+                        <button type="button"
+                            class="btn btn-primary-modern position-absolute top-50 translate-middle-y end-0 me-2 rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                            style="width: 35px; height: 35px; padding: 0;">
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top">
+                <p class="small text-muted mb-2 mb-md-0">© 2026 LuminaWash Tech. All rights reserved.</p>
+                <div class="d-flex gap-3 small fw-semibold">
+                    <a href="#" class="text-muted text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

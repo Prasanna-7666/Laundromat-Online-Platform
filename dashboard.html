@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - LuminaWash</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        /* Delegates scrolling to individual panes */
+
+        .modern-sidebar {
+            background: var(--light-bg);
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
+            height: 100vh;
+            z-index: 1000;
+            overflow-y: auto;
+            overflow-x: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .dark-mode .modern-sidebar {
+            background: var(--dark-base);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 10px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            transition: var(--transition-smooth);
+            white-space: nowrap;
+        }
+
+        .sidebar-item:hover,
+        .sidebar-item.active {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+        }
+
+        .sidebar-item i {
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 767.98px) {
+            .sidebar-item {
+                padding: 12px;
+                justify-content: center;
+            }
+
+            .sidebar-item i {
+                margin-right: 0;
+            }
+
+            .modern-sidebar {
+                width: 80px;
+            }
+        }
+
+        .status-pill {
+            padding: 6px 16px;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .dash-main {
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.21.8C7.69.295 8 0 8 0s.31.295.79.804C11.67 3.653 14 7.6 14 11c0 3.314-2.686 6-6 6s-6-2.686-6-6c0-3.4 2.33-7.347 5.21-10.2M4.553 13.131C4.738 13.26 5 13.13 5 12.87V5.513c0-.181.041-.354.12-.506.54-1.053 1.637-2.585 2.88-3.951.845-.922 1.541-1.56 1.83-1.815v14.123A4.98 4.98 0 0 1 4.553 13.13' fill='%236366f1'/%3E%3C/svg%3E"
+        type="image/svg+xml">
+</head>
+
+<body>
+
+    <div class="container-fluid p-0">
+        <div class="row g-0 flex-nowrap">
+            <!-- Modern Sidebar -->
+            <div class="col-auto col-md-3 col-xl-2 modern-sidebar d-flex flex-column py-4 px-2 px-md-3 shadow-sm">
+                <a class="d-flex align-items-center justify-content-center justify-content-md-start fw-bold fs-4 text-decoration-none mb-5"
+                    href="index.html">
+                    <i class="bi bi-droplet-half text-gradient me-1"></i>
+                    <span class="text-gradient d-none d-md-inline">LuminaWash</span>
+                </a>
+
+                <nav class="nav flex-column mb-auto w-100">
+                    <p class="text-muted small fw-bold px-3 text-uppercase mb-2 d-none d-md-block">Menu</p>
+                    <a class="sidebar-item active" href="#" title="Overview"><i class="bi bi-grid-fill"></i> <span
+                            class="d-none d-md-inline">Overview</span></a>
+                    <a class="sidebar-item" href="#" title="Schedule Pickup"><i class="bi bi-basket3"></i> <span
+                            class="d-none d-md-inline">Schedule Pickup</span></a>
+                    <a class="sidebar-item" href="#" title="Order History"><i class="bi bi-clock-history"></i> <span
+                            class="d-none d-md-inline">Order History</span></a>
+                    <a class="sidebar-item d-flex justify-content-between align-items-center flex-wrap" href="#"
+                        title="Subscriptions">
+                        <div><i class="bi bi-star"></i> <span class="d-none d-md-inline">Subscriptions</span></div>
+                        <span class="badge bg-primary rounded-pill small ms-1 ms-md-0 d-none d-md-inline">1
+                            Active</span>
+                    </a>
+
+                    <p class="text-muted small fw-bold px-3 text-uppercase mt-4 mb-2 d-none d-md-block">Account</p>
+                    <a class="sidebar-item" href="#" title="Wallet & Cards"><i class="bi bi-wallet2"></i> <span
+                            class="d-none d-md-inline">Wallet & Cards</span></a>
+                    <a class="sidebar-item" href="#" title="Addresses"><i class="bi bi-geo-alt"></i> <span
+                            class="d-none d-md-inline">Addresses</span></a>
+                    <a class="sidebar-item" href="#" title="Settings"><i class="bi bi-gear"></i> <span
+                            class="d-none d-md-inline">Settings</span></a>
+
+                    <a class="sidebar-item text-danger mt-5" style="background: rgba(239,68,68,0.1);" href="index.html"
+                        title="Sign Out"><i class="bi bi-box-arrow-left"></i> <span class="d-none d-md-inline">Sign
+                            Out</span></a>
+                </nav>
+
+                <!-- Help Widget -->
+                <div class="glass-card p-3 mt-4 border-0 bg-primary-subtle d-none d-md-xl-block">
+                    <h6 class="fw-bold text-primary-color mb-1">Need Help?</h6>
+                    <p class="small text-muted mb-2">Chat with a garment specialist.</p>
+                    <button class="btn btn-primary-modern btn-sm w-100">Live Chat</button>
+                </div>
+            </div>
+
+            <!-- Main Dashboard Area -->
+            <main class="col dash-main p-4 p-md-5">
+
+                <header class="d-flex flex-wrap justify-content-between align-items-center mb-5 reveal-up gap-3">
+                    <div>
+                        <h2 class="fw-bolder mb-1">Good Morning, Alex 👋</h2>
+                        <p class="text-muted mb-0">Here is your laundry activity overview.</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 gap-md-4">
+                        <button class="btn btn-primary-modern px-4 d-none d-sm-block"><i
+                                class="bi bi-plus-lg me-2"></i>New Order</button>
+                        <div id="themeToggle"
+                            class="btn bg-white border rounded-circle p-2 shadow-sm d-flex align-items-center justify-content-center"
+                            style="width:40px;height:40px;cursor:pointer;">
+                            <i class="bi bi-moon fs-5 text-muted"></i>
+                        </div>
+                        <div class="position-relative">
+                            <i class="bi bi-bell fs-5 text-muted hover-glow" style="cursor:pointer;"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+                        </div>
+                        <img src="https://via.placeholder.com/48/6366f1/ffffff?text=A" alt="Profile"
+                            class="rounded-circle shadow-sm"
+                            style="width: 48px; height: 48px; border: 2px solid white; cursor:pointer;">
+                    </div>
+                </header>
+
+                <!-- Modern Stat Cards -->
+                <div class="row g-4 mb-5">
+                    <div class="col-sm-6 col-xl-3 reveal-up">
+                        <div
+                            class="glass-card p-4 border-0 bg-white shadow-sm h-100 position-relative overflow-hidden w-100">
+                            <div class="position-relative z-1">
+                                <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+                                    <div class="icon-box m-0 bg-primary-subtle text-primary-color"
+                                        style="width: 48px; height: 48px; font-size: 20px;">
+                                        <i class="bi bi-bag-check-fill"></i>
+                                    </div>
+                                    <span class="badge bg-success-subtle text-success">+12%</span>
+                                </div>
+                                <h3 class="fw-bolder mb-1">24</h3>
+                                <p class="text-muted small fw-bold mb-0">Total Orders</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-3 reveal-up" style="transition-delay: 0.1s;">
+                        <div
+                            class="glass-card p-4 border-0 bg-white shadow-sm h-100 position-relative border-start border-4 border-warning w-100">
+                            <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+                                <div class="icon-box m-0 bg-warning-subtle text-warning"
+                                    style="width: 48px; height: 48px; font-size: 20px;">
+                                    <i class="bi bi-truck"></i>
+                                </div>
+                                <span class="badge bg-warning text-dark"><i class="bi bi-geo-alt-fill me-1"></i>En
+                                    Route</span>
+                            </div>
+                            <h3 class="fw-bolder mb-1">#LW-9942</h3>
+                            <p class="text-muted small fw-bold d-flex justify-content-between flex-wrap gap-2 mb-0">
+                                <span>Arriving via Courier</span>
+                                <span class="text-warning">12 Mins</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-3 reveal-up" style="transition-delay: 0.2s;">
+                        <div class="glass-card p-4 border-0 bg-white shadow-sm h-100 w-100">
+                            <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+                                <div class="icon-box m-0 bg-success-subtle text-success"
+                                    style="width: 48px; height: 48px; font-size: 20px;">
+                                    <i class="bi bi-piggy-bank"></i>
+                                </div>
+                            </div>
+                            <h3 class="fw-bolder mb-1">$45.00</h3>
+                            <p class="text-muted small fw-bold mb-0">Wallet Balance</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xl-3 reveal-up" style="transition-delay: 0.3s;">
+                        <div
+                            class="glass-card p-4 border-0 bg-white position-relative overflow-hidden shadow-sm h-100 w-100 text-center d-flex flex-column justify-content-center">
+                            <span
+                                class="position-absolute top-0 end-0 bg-dark text-white small px-3 py-1 rounded-bl-3 fw-bold"
+                                style="border-bottom-left-radius: 16px;">PRO</span>
+                            <i class="bi bi-stars fs-1 mb-2 mt-3 text-warning"></i>
+                            <h3 class="fw-bolder mb-1 text-main">2,450 <span
+                                    class="fs-6 fw-normal text-muted">pts</span></h3>
+                            <p class="text-muted small fw-bold mb-0">You're 50pts away from Silver</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 reveal-up">
+                    <!-- Clean Table Area -->
+                    <div class="col-xl-8">
+                        <div class="glass-card bg-white border-0 shadow-sm p-0 overflow-hidden h-100">
+                            <div class="p-4 border-bottom d-flex justify-content-between align-items-center bg-light">
+                                <h5 class="fw-bold mb-0">Recent Order History</h5>
+                                <button class="btn btn-sm btn-outline-modern">View All</button>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0 border-white text-nowrap">
+                                    <thead class="text-muted small text-uppercase" style="background: rgba(0,0,0,0.02)">
+                                        <tr>
+                                            <th class="py-3 px-4 border-0">Order ID</th>
+                                            <th class="py-3 border-0">Service</th>
+                                            <th class="py-3 border-0">Status</th>
+                                            <th class="py-3 border-0">Amount</th>
+                                            <th class="py-3 px-4 border-0 text-end">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="px-4 py-3 fw-bold text-main">#LW-9942</td>
+                                            <td class="py-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="bg-primary-subtle p-2 rounded me-3 text-primary-color">
+                                                        <i class="bi bi-snow"></i>
+                                                    </div>
+                                                    <div>
+                                                        <span class="fw-semibold d-block">Dry Cleaning</span>
+                                                        <small class="text-muted">4 items</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="py-3"><span class="status-pill bg-warning-subtle text-warning">In
+                                                    Transit</span></td>
+                                            <td class="py-3 fw-bold">$45.50</td>
+                                            <td class="px-4 py-3 text-end"><button
+                                                    class="btn btn-light btn-sm rounded-pill fw-bold border shadow-sm">Track</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-3 fw-bold text-main">#LW-9811</td>
+                                            <td class="py-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="bg-success-subtle p-2 rounded me-3 text-success"><i
+                                                            class="bi bi-water"></i></div>
+                                                    <div>
+                                                        <span class="fw-semibold d-block">Wash & Fold</span>
+                                                        <small class="text-muted">15 lbs</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="py-3"><span
+                                                    class="status-pill bg-success-subtle text-success">Delivered</span>
+                                            </td>
+                                            <td class="py-3 fw-bold">$29.85</td>
+                                            <td class="px-4 py-3 text-end"><button
+                                                    class="btn btn-light btn-sm rounded-pill fw-bold text-muted border">Receipt</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-3 fw-bold text-main">#LW-9704</td>
+                                            <td class="py-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="bg-success-subtle p-2 rounded me-3 text-success"><i
+                                                            class="bi bi-water"></i></div>
+                                                    <div>
+                                                        <span class="fw-semibold d-block">Wash & Fold</span>
+                                                        <small class="text-muted">12 lbs</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="py-3"><span
+                                                    class="status-pill bg-success-subtle text-success">Delivered</span>
+                                            </td>
+                                            <td class="py-3 fw-bold">$23.88</td>
+                                            <td class="px-4 py-3 text-end"><button
+                                                    class="btn btn-light btn-sm rounded-pill fw-bold text-muted border">Receipt</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-3 fw-bold text-main">#LW-9630</td>
+                                            <td class="py-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="bg-secondary p-2 rounded me-3 text-white"><i
+                                                            class="bi bi-flower1"></i></div>
+                                                    <div>
+                                                        <span class="fw-semibold d-block">Leather Care</span>
+                                                        <small class="text-muted">1 Jacket</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="py-3"><span
+                                                    class="status-pill bg-success-subtle text-success">Delivered</span>
+                                            </td>
+                                            <td class="py-3 fw-bold">$65.00</td>
+                                            <td class="px-4 py-3 text-end"><button
+                                                    class="btn btn-light btn-sm rounded-pill fw-bold text-muted border">Receipt</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Subscription & Referral -->
+                    <div class="col-xl-4 d-flex flex-column gap-4">
+
+                        <!-- Active Subscription -->
+                        <div class="glass-card bg-white border-0 shadow-sm p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h6 class="fw-bold mb-0 text-uppercase tracking-wide small text-muted">Active Plan</h6>
+                                <i class="bi bi-three-dots fs-5 text-muted"></i>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary-subtle text-primary-color p-3 rounded-4 me-3 fs-3">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Weekly Wash Pros</h5>
+                                    <p class="text-muted small mb-0">Billed $79/mo on the 1st</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-2 d-flex justify-content-between small fw-bold">
+                                <span>Used: 25 lbs</span>
+                                <span class="text-muted">Max: 40 lbs</span>
+                            </div>
+                            <div class="progress mb-4" style="height: 6px;">
+                                <div class="progress-bar bg-primary-color rounded-pill" role="progressbar"
+                                    style="width: 62.5%;"></div>
+                            </div>
+
+                            <button class="btn btn-outline-modern w-100 btn-sm fw-bold">Manage Plan</button>
+                        </div>
+
+                        <!-- Referral Program -->
+                        <div class="glass-card bg-white border-0 shadow-sm p-4 border-top border-4 border-primary">
+                            <h6 class="fw-bold mb-2"><i class="bi bi-gift text-primary-color me-2"></i> Earn $20 Credit
+                            </h6>
+                            <p class="text-muted small mb-4">Give a friend $20 off their first order, and you'll get $20
+                                when they use it.</p>
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light border-0 fw-bold text-primary-color"
+                                    value="LUMINA-ALEX99" readonly>
+                                <button class="btn btn-primary-modern px-3" type="button"><i
+                                        class="bi bi-copy"></i></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
