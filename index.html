@@ -52,7 +52,7 @@
     </style>
     <!-- Favicon -->
     <link rel="icon"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.21.8C7.69.295 8 0 8 0s.31.295.79.804C11.67 3.653 14 7.6 14 11c0 3.314-2.686 6-6 6s-6-2.686-6-6c0-3.4 2.33-7.347 5.21-10.2M4.553 13.131C4.738 13.26 5 13.13 5 12.87V5.513c0-.181.041-.354.12-.506.54-1.053 1.637-2.585 2.88-3.951.845-.922 1.541-1.56 1.83-1.815v14.123A4.98 4.98 0 0 1 4.553 13.13' fill='%236366f1'/%3E%3C/svg%3E"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6z' fill='%236366f1'/%3E%3C/svg%3E"
         type="image/svg+xml">
 </head>
 
@@ -63,10 +63,10 @@
     <div class="blob-bg hero-blob-2"></div>
 
     <!-- Modern Glass Navigation -->
-    <nav class="navbar navbar-expand-lg glass-nav fixed-top py-3">
+    <nav class="navbar navbar-expand-xl glass-nav fixed-top py-3">
         <div class="container align-items-center">
             <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="index.html">
-                <i class="bi bi-droplet-half text-gradient me-2 fs-2"></i>
+                <i class="bi bi-droplet-fill text-gradient me-2 fs-2"></i>
                 <span class="text-gradient">LuminaWash</span>
             </a>
 
@@ -133,9 +133,9 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 position-relative z-1 d-none d-lg-block">
+                <div class="col-lg-6 position-relative z-1 mb-5 mb-lg-0">
                     <!-- Futuristic App Representation -->
-                    <div class="position-relative mx-auto" style="width: 400px; height: 500px;">
+                    <div class="position-relative mx-auto" style="max-width: 400px; width: 100%; height: 500px;">
                         <div class="glass-card position-absolute w-100 h-100 p-4 border"
                             style="border-radius: 40px; border-color: rgba(99,102,241,0.2) !important;">
                             <div class="d-flex justify-content-between align-items-center mb-4">
@@ -200,7 +200,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 text-center z-1 reveal-up" style="transition-delay: 0.1s;">
-                    <div class="glass-card p-5 h-100 border-0 bg-light" style="transform: translateY(-20px);">
+                    <div class="glass-card p-5 h-100 border-0 bg-light">
                         <div class="icon-box bg-gradient-custom shadow mx-auto"
                             style="width: 80px; height: 80px; font-size: 32px;">
                             <i class="bi bi-stars text-white"></i>
@@ -313,8 +313,8 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6 reveal-up" style="transition-delay: 0.1s;">
-                    <div class="glass-card p-5 h-100 bg-white border border-primary position-relative text-start shadow-lg"
-                        style="transform: scale(1.05); z-index: 2;">
+                    <div
+                        class="glass-card pricing-card-highlighted p-5 h-100 bg-white border border-primary position-relative text-start shadow-lg">
                         <span
                             class="position-absolute top-0 end-0 bg-primary-modern text-white small px-3 py-1 rounded-bl-3 fw-bold"
                             style="border-bottom-left-radius: 16px;">DRY CLEAN</span>
@@ -366,7 +366,7 @@
 
             <div class="row g-4">
                 <div class="col-lg-4 reveal-up">
-                    <div class="glass-card p-4 border-0 shadow-sm bg-white h-100">
+                    <div class="glass-card text-center p-4 border-0 shadow-sm bg-white h-100">
                         <div class="text-warning mb-3">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -383,7 +383,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 reveal-up" style="transition-delay: 0.1s;">
-                    <div class="glass-card p-4 border-0 shadow-sm bg-white h-100">
+                    <div class="glass-card text-center p-4 border-0 shadow-sm bg-white h-100">
                         <div class="text-warning mb-3">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -400,7 +400,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 reveal-up" style="transition-delay: 0.2s;">
-                    <div class="glass-card p-4 border-0 shadow-sm bg-white h-100">
+                    <div class="glass-card text-center p-4 border-0 shadow-sm bg-white h-100">
                         <div class="text-warning mb-3">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -443,8 +443,9 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-5 text-center d-none d-lg-block">
-                        <img src="assets/img/laundromat_app_3d_1772178495746.png" class="img-fluid rounded-4 shadow-lg"
+                    <div class="col-lg-5 text-center">
+                        <img src="assets/img/laundromat_app_3d_1772178495746.png"
+                            class="img-fluid rounded-4 shadow-lg app-banner-img"
                             style="transform: rotate(5deg) scale(1.1); margin-top: 50px; object-fit: cover; height: 500px;"
                             alt="App Interface">
                     </div>
@@ -459,7 +460,7 @@
             <div class="row g-5 mb-5">
                 <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
                     <a class="navbar-brand d-inline-flex align-items-center fw-bold fs-3 mb-3" href="index.html">
-                        <i class="bi bi-droplet-half text-gradient me-2"></i>
+                        <i class="bi bi-droplet-fill text-gradient me-2"></i>
                         <span class="text-gradient">LuminaWash</span>
                     </a>
                     <p class="text-muted mb-4 pe-lg-4">Providing premium, eco-friendly garment care that gives you back

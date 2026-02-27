@@ -90,6 +90,23 @@ h6 {
     color: white;
 }
 
+.btn-outline-modern.btn-white {
+    background: white;
+    color: var(--text-main);
+    transition: var(--transition-smooth);
+}
+
+.btn-white:hover {
+    background-color: #f8fafc;
+    border-color: #e2e8f0 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.btn-white i {
+    font-size: 1.2rem;
+}
+
 .btn-outline-modern {
     background: transparent;
     color: var(--primary-color);
@@ -151,6 +168,24 @@ h6 {
     background-color: var(--secondary-color) !important;
 }
 
+/* Link Hover Effects */
+a.text-primary-color,
+a.text-secondary-color {
+    transition: var(--transition-smooth);
+}
+
+a.text-primary-color:hover {
+    color: #818cf8 !important;
+    /* Lighter indigo */
+    text-decoration: underline !important;
+}
+
+a.text-secondary-color:hover {
+    color: #f472b6 !important;
+    /* Lighter pink */
+    text-decoration: underline !important;
+}
+
 /* Comprehensive Dark Mode Overrides */
 body.dark-mode,
 [data-bs-theme="dark"] body {
@@ -182,6 +217,19 @@ body.dark-mode,
 .dark-mode .accordion-body,
 .dark-mode .glass-nav.scrolled {
     background-color: var(--dark-surface) !important;
+}
+
+/* White Button Overrides */
+.dark-mode .btn-white {
+    background-color: var(--dark-surface) !important;
+    color: #f8fafc !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark-mode .btn-white:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
 }
 
 body.dark-mode section.bg-light {
@@ -280,4 +328,92 @@ body.dark-mode section.bg-light {
 
 .dark-mode .blob-bg {
     opacity: 0.2;
+}
+
+/* Responsiveness Fixes */
+@media (max-width: 1200px) {
+    .app-banner-img {
+        height: 350px !important;
+        margin-top: 20px !important;
+        transform: rotate(0deg) scale(1) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-section .col-md-6 {
+        margin-bottom: 30px;
+    }
+
+    .app-banner-img {
+        height: 280px !important;
+        margin-top: 30px !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Navbar Active State in Dark Mode */
+.dark-mode .navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+/* Pricing Card Highlighted (Scale only on Desktop) */
+@media (min-width: 992px) {
+    .pricing-card-highlighted {
+        transform: scale(1.05);
+        z-index: 2;
+    }
+}
+
+/* Footer Link Hover Effect */
+.footer-link {
+    transition: var(--transition-smooth);
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateX(5px);
+}
+
+/* Home 2 Hero Image Business Fleet Fixes */
+.hero-home2-img-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.hero-home2-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-smooth);
+}
+
+@media (max-width: 1199.98px) {
+    .hero-home2-img-container {
+        max-width: 450px;
+    }
+
+    .hero-home2-img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-home2-img-container {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .hero-home2-img {
+        height: auto;
+        max-height: 350px;
+    }
 }

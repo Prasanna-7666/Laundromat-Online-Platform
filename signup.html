@@ -21,33 +21,34 @@
     </style>
     <!-- Favicon -->
     <link rel="icon"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.21.8C7.69.295 8 0 8 0s.31.295.79.804C11.67 3.653 14 7.6 14 11c0 3.314-2.686 6-6 6s-6-2.686-6-6c0-3.4 2.33-7.347 5.21-10.2M4.553 13.131C4.738 13.26 5 13.13 5 12.87V5.513c0-.181.041-.354.12-.506.54-1.053 1.637-2.585 2.88-3.951.845-.922 1.541-1.56 1.83-1.815v14.123A4.98 4.98 0 0 1 4.553 13.13' fill='%236366f1'/%3E%3C/svg%3E"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6z' fill='%236366f1'/%3E%3C/svg%3E"
         type="image/svg+xml">
 </head>
 
 <body>
 
-    <div class="container-fluid p-0 vh-100 overflow-hidden">
-        <div class="row g-0 h-100">
+    <div class="container-fluid p-0 min-vh-100 d-flex flex-column">
+        <div class="row g-0 flex-grow-1">
             <!-- Form Side (Left for Sign Up) -->
-            <div
-                class="col-lg-7 col-xl-8 d-flex align-items-center justify-content-center bg-light position-relative order-2 order-lg-1">
+            <div class="col-lg-7 col-xl-8 d-flex flex-column bg-light position-relative order-2 order-lg-1">
 
                 <div id="themeToggle"
                     class="btn btn-white rounded-circle p-2 shadow-sm position-absolute top-0 start-0 m-4"
-                    style="width:40px;height:40px;cursor:pointer;">
+                    style="width:40px;height:40px;cursor:pointer; z-index: 10;">
                     <i class="bi bi-moon fs-5 text-muted"></i>
                 </div>
 
-                <div class="w-100" style="max-width: 450px; padding: 20px;">
-                    <a class="d-inline-flex align-items-center fw-bold fs-3 text-decoration-none mb-4"
-                        href="index.html">
-                        <i class="bi bi-droplet-half text-gradient me-2"></i>
-                        <span class="text-gradient">LuminaWash</span>
-                    </a>
+                <div class="w-100 m-auto pt-5 mt-5 mt-lg-auto mb-5 mb-lg-auto" style="max-width: 450px; padding: 20px;">
+                    <div class="text-center mb-4">
+                        <a class="d-inline-flex align-items-center justify-content-center fw-bold fs-3 text-decoration-none mb-4 w-100"
+                            href="index.html">
+                            <i class="bi bi-droplet-fill text-gradient me-2"></i>
+                            <span class="text-gradient">LuminaWash</span>
+                        </a>
 
-                    <h2 class="fw-bold mb-2">Start your journey.</h2>
-                    <p class="text-muted mb-4">Create your account to schedule your first pickup.</p>
+                        <h2 class="fw-bold mb-2">Start your journey.</h2>
+                        <p class="text-muted mb-0">Create your account to schedule your first pickup.</p>
+                    </div>
 
                     <form>
                         <div class="row g-3 mb-3">
@@ -74,9 +75,30 @@
                                 style="border-radius: 12px;" placeholder="Create a strong password">
                         </div>
 
+                        <div class="form-check mb-4">
+                            <input class="form-check-input shadow-sm" type="checkbox" value="" id="termsCheck">
+                            <label class="form-check-label text-muted small" for="termsCheck">
+                                I agree to the <a href="#" class="text-primary-color text-decoration-none fw-bold">Terms
+                                    & Conditions</a>
+                            </label>
+                        </div>
+
                         <button type="button" class="btn btn-primary-modern w-100 py-3 mb-4"
                             onclick="location.href='dashboard.html'">Create Account</button>
                     </form>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <hr class="flex-grow-1 border-secondary">
+                        <span class="mx-3 text-muted small fw-bold">OR</span>
+                        <hr class="flex-grow-1 border-secondary">
+                    </div>
+
+                    <div class="d-flex gap-3 mb-5">
+                        <button class="btn btn-white shadow-sm border-0 flex-grow-1 py-3" style="border-radius:12px;"><i
+                                class="bi bi-google"></i></button>
+                        <button class="btn btn-white shadow-sm border-0 flex-grow-1 py-3" style="border-radius:12px;"><i
+                                class="bi bi-apple"></i></button>
+                    </div>
 
                     <p class="text-muted small text-center mb-0">Already have an account? <a href="login.html"
                             class="text-primary-color fw-bold text-decoration-none">Sign in</a></p>
