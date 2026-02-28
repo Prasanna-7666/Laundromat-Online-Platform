@@ -58,6 +58,11 @@ h6 {
     color: white;
 }
 
+.bg-primary-modern {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    color: white !important;
+}
+
 /* Glassmorphism Navigation */
 .glass-nav {
     background: rgba(255, 255, 255, 0.7) !important;
