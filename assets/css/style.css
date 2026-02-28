@@ -22,12 +22,17 @@
 }
 
 /* Base & Typography */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--text-main);
     background-color: var(--light-bg);
     transition: var(--transition-smooth);
-    overflow-x: hidden;
 }
 
 h1,
@@ -330,6 +335,17 @@ body.dark-mode section.bg-light {
     opacity: 0.2;
 }
 
+/* Floating Badges */
+.float-badge-left {
+    left: -50px;
+    transition: var(--transition-smooth);
+}
+
+.float-badge-right {
+    right: -60px;
+    transition: var(--transition-smooth);
+}
+
 /* Responsiveness Fixes */
 @media (max-width: 1200px) {
     .app-banner-img {
@@ -350,6 +366,28 @@ body.dark-mode section.bg-light {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .float-badge-left {
+        left: -10px;
+        transform: scale(0.9);
+    }
+
+    .float-badge-right {
+        right: -10px;
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 576px) {
+    .float-badge-left {
+        left: 0;
+        transform: scale(0.85);
+    }
+
+    .float-badge-right {
+        right: 0;
+        transform: scale(0.85);
     }
 }
 
